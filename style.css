@@ -1,0 +1,266 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat', sans-serif;
+}
+
+body {
+  overflow: hidden;
+  padding: 0 50px;
+}
+
+.container {
+  max-width: 1170px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header {
+  margin-top: 20px;
+}
+
+.header-auth {
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.header-logo {
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+}
+
+.header-logo img {
+  width: 28px;
+  margin-right: 10px;
+}
+
+.header-social {
+  list-style: none;
+  display: flex;;
+}
+
+.header-social li {
+  width: 32px;
+  height: 32px;
+  background-color: rgb(255,255,255, 0.1);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 17px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.header-social li:last-child {
+  margin: 0
+}
+
+.social-twitter {
+  background-image: url('./twitter.svg');
+}
+
+.social-instagram {
+  background-image: url('./instagram.svg');;
+}
+
+.background {
+  position: relative;
+  width: 740px;
+  height: 740px;
+  /* left: 831px; */
+  /* right: -130px; */
+  /* top: -103px; */
+  /* top: -50px; */
+  right: -150px;
+  top: -350px;
+  background-color: #c698fa;
+  z-index: -1;
+  border-radius: 50%;
+}
+
+.background2 {
+  position: relative;
+  width: 72px;
+  height: 72px;
+  /* top: 689px; */
+  /* left: 10px; */
+  /* left: 10px; */
+  top: -300px;
+  left: 350px;
+  background-color: #75E3EA;
+  z-index: -1;
+  border-radius: 50%;
+}
+
+.background3 {
+  position: relative;
+  width: 72px;
+  height: 72px;
+  /* right: 10px; */
+  top: -640px;
+  /* top: 350px; */
+  background: #FFC278;
+  z-index: -1;
+  border-radius: 50%;
+}
+
+.background-block {
+  width: 560px;
+  height: 460px;
+  /* border: 1px solid red; */
+  /* background-color: red; */
+  /* border: '1px solid red'; */
+  background-image: url('./background.png');  
+  background-position: center;
+  background-size: cover;
+  margin-right: -30px;
+  margin-top: 30px;
+  /* margin-left: 100px; */
+}
+
+.main-section {
+  margin-top: 100px;
+  position: relative;
+  overflow: visible;
+}
+
+.title {
+  display: flex;
+  flex-direction: column;
+}
+
+.title h2 {
+  font-size: 72px;
+  max-width: 500px;
+  margin-bottom: 16px;
+  font-weight: 800;
+}
+
+.title span {
+  font-size: 18px;
+  margin-bottom: 32px;
+  /* line-height: 2px; */
+}
+
+.title button {
+  width: 196px;
+  height: 62px;
+  
+  outline: none;
+  border-radius: 8px;
+  font-size: 20px;
+}
+
+.purple {
+  background: #8C30F5;
+  border: none;
+  color: white;
+}
+
+.mobile-registerButton {
+  /* border: 2px solid red; */
+  border: 1px solid #8C30F5;
+  background: white;
+  color: black;
+  margin-top: 20px;
+  /* background: red; */
+}
+
+@media (max-width: 1100px) {
+  .title h2 {
+    font-size: 32px;
+  }
+
+  .background-block {
+    margin-top: 0px;
+    background-size: 500px;
+    background-repeat: no-repeat;
+  }
+}
+
+.mobile-buttons {
+  display: none;
+}
+
+
+@media (max-width: 750px) {
+  .title h2 {
+    font-size: 32px;
+    /* margin: 0 auto; */
+  }
+  .mobile-buttons {
+    display: block;
+  }
+  .mobile-buttons button{
+    /* width:  */
+    /* background-color: ivory; */
+    font-size: 17px;
+  }
+
+  body {  
+    overflow: hidden;
+    /* border: 1px solid red; */
+    /* width: 100%; */
+    /* display: flex; */
+    /* justify-content: center; */
+  }
+  .main-section {
+    margin-top: 40%;
+  }
+
+  .desktop-button {
+    display: none;
+  }
+
+  .header-auth {
+    display: none;
+  }
+
+  .header-logo {
+    margin: 0 auto;
+  }
+
+  .header-social {
+    display: none;
+  }
+
+  .title {
+    /* justify-content: center; */
+    align-items: center;
+    text-align: center;
+    /* margin: 0 auto; */
+    /* text-align: center; */
+    /* border: 1px solid red; */
+  }
+
+  .main-section {
+    /* border: 1px solid red; */
+    /* text-align: center; */
+  }
+
+  .background-block {
+    /* visibility: hidden; */
+    /* display: none; */
+    position: absolute;
+    background-image: none;
+  }
+
+  .background {
+    /* top: 200; */
+    /* bottom: 200px; */
+    /* top: -200px; */
+  }
+
+  .background2 {
+    left: 270px;
+  }
+
+  .background3 {
+  /* display: none; */
+    top: -590px;
+    left: 5px;
+     /* bottom: 1000px; */
+  }
+} 
