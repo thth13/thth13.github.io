@@ -6,19 +6,20 @@
 
 body {
   overflow: hidden;
-  padding: 0 50px;
+}
+
+a {
+  color: black;
+  text-decoration: none;
 }
 
 .container {
+  padding: 20px 50px;
   max-width: 1170px;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
-
-header {
-  margin-top: 20px;
 }
 
 .header-auth {
@@ -65,115 +66,100 @@ header {
   background-image: url('./instagram.svg');;
 }
 
-.background {
-  position: relative;
-  width: 740px;
-  height: 740px;
-  /* left: 831px; */
-  /* right: -130px; */
-  /* top: -103px; */
-  /* top: -50px; */
-  right: -150px;
-  top: -350px;
-  background-color: #c698fa;
-  z-index: -1;
-  border-radius: 50%;
-}
-
-.background2 {
-  position: relative;
-  width: 72px;
-  height: 72px;
-  /* top: 689px; */
-  /* left: 10px; */
-  /* left: 10px; */
-  top: -300px;
-  left: 350px;
-  background-color: #75E3EA;
-  z-index: -1;
-  border-radius: 50%;
-}
-
-.background3 {
-  position: relative;
-  width: 72px;
-  height: 72px;
-  /* right: 10px; */
-  top: -640px;
-  /* top: 350px; */
-  background: #FFC278;
-  z-index: -1;
-  border-radius: 50%;
-}
-
-.background-block {
+.background-circles {
   width: 560px;
   height: 460px;
-  /* border: 1px solid red; */
-  /* background-color: red; */
-  /* border: '1px solid red'; */
   background-image: url('./background.png');  
   background-position: center;
   background-size: cover;
   margin-right: -30px;
   margin-top: 30px;
-  /* margin-left: 100px; */
+}
+
+.background-circles div {
+  position: relative;
+  border-radius: 50%;
+  z-index: -1;
+}
+
+.circle1 {
+  width: 740px;
+  height: 740px;
+  right: -150px;
+  top: -350px;
+  background-color: #04C45C;
+}
+
+.circle2 {
+  width: 72px;
+  height: 72px;
+  top: -300px;
+  left: 350px;
+  background-color: #75E3EA;
+}
+
+.circle3 {
+  width: 72px;
+  height: 72px;
+  top: -640px;
+  background: #FFC278;
 }
 
 .main-section {
-  margin-top: 100px;
+  margin-top: 75px;
   position: relative;
   overflow: visible;
 }
 
-.title {
+.title-block {
   display: flex;
   flex-direction: column;
 }
 
-.title h2 {
+.title-block h2 {
   font-size: 72px;
   max-width: 500px;
   margin-bottom: 16px;
   font-weight: 800;
 }
 
-.title span {
+.title-block span {
   font-size: 18px;
   margin-bottom: 32px;
-  /* line-height: 2px; */
 }
 
-.title button {
+.title-block button {
   width: 196px;
   height: 62px;
-  
+  cursor: pointer;
   outline: none;
   border-radius: 8px;
   font-size: 20px;
 }
 
-.purple {
+.register-button:active {
+  background: #7C30F1;
+}
+
+.register-button {
   background: #8C30F5;
   border: none;
   color: white;
 }
 
-.mobile-registerButton {
-  /* border: 2px solid red; */
+.login-button {
   border: 1px solid #8C30F5;
   background: white;
   color: black;
   margin-top: 20px;
-  /* background: red; */
 }
 
 @media (max-width: 1100px) {
-  .title h2 {
+  .title-block h2 {
     font-size: 32px;
   }
 
-  .background-block {
+  .background-circles {
     margin-top: 0px;
     background-size: 500px;
     background-repeat: no-repeat;
@@ -186,31 +172,27 @@ header {
 
 
 @media (max-width: 750px) {
-  
-  .title h2 {
+  .title-block h2 {
     font-size: 37px;
-    /* margin: 0 auto; */
   }
+
   .mobile-buttons {
     display: block;
   }
+  
   .mobile-buttons button{
-    /* width:  */
-    /* background-color: ivory; */
     font-size: 17px;
   }
 
   body, html {  
     overflow: hidden;
-    /* border: 1px solid red; */
     height: 100%;
-    /* display: flex; */
-    /* justify-content: center; */
   }
 
-  body {
-    padding: 0 10px;
+  .container {
+    padding: 20px 10px;
   }
+
   .main-section {
     margin-top: 35%;
   }
@@ -231,50 +213,26 @@ header {
     display: none;
   }
 
-  .title {
-    /* justify-content: center; */
-    align-items: center;
+  .title-block {
     text-align: center;
-    /* margin: 0 auto; */
-    /* text-align: center; */
-    /* border: 1px solid red; */
   }
 
-  .title h2 {
-
-  }
-
-  .main-section {
-    /* border: 1px solid red; */
-    /* text-align: center; */
-  }
-
-  .title button {
+  .title-block button {
     width: 275px;
     height: 52px;
   }
 
-  .background-block {
-    /* visibility: hidden; */
-    /* display: none; */
+  .background-circles {
     position: absolute;
     background-image: none;
   }
 
-  .background {
-    /* top: 200; */
-    /* bottom: 200px; */
-    /* top: -200px; */
+  .circle2 {
+    left: 270px;
+    background: #FFC278;
   }
 
-  .background2 {
-    left: 270px;background: #FFC278;
-  }
-
-  .background3 {
-  display: none;
-    top: -590px;
-    left: 5px;
-     /* bottom: 1000px; */
+  .circle3 {
+    display: none;
   }
 } 
